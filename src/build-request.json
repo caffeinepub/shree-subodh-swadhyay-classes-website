@@ -1,0 +1,74 @@
+{
+  "kind": "build_request",
+  "title": "Update header for mobile clarity: remove tagline and optimize institute name layout",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Remove the tagline text “Empowering Dreams, Inspiring Success” from the website header (next to the logo) so the header displays only the institute name “Shree Subodh Swadhyay Classes”. The tagline must remain available only in the Home page hero section and must not appear anywhere in the header on any breakpoint.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Completely remove the tagline text “Empowering Dreams, Inspiring Success” from the top header area beside the logo (especially on mobile view).",
+          "Tagline should be available only in hero section, not in header"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On all pages and at all breakpoints, the header area beside the logo does not show the tagline text.",
+        "The institute name shown in the header is exactly “Shree Subodh Swadhyay Classes”.",
+        "The Home page hero section still contains the tagline (no removal from hero)."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the header institute-name typography and responsive layout for mobile clarity and brand visibility while keeping the existing header structure (logo on the left, hamburger menu on the right). Desktop must show logo + institute name aligned horizontally. Mobile must make the name clearly readable with proper line breaking (maximum 2 lines), no truncation, strong hierarchy, bold professional styling, and high contrast using Brand Blue #010080 on a white background. Ensure adequate spacing and touch usability.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Ensure the company name: Fits cleanly on mobile screens; Uses proper line-breaking if needed (2 lines max); Is clearly readable without truncation; Has strong visual hierarchy over other elements",
+          "Maintain: Logo on the left; Hamburger menu on the right; Company name aligned properly next to or below the logo (mobile-optimized)",
+          "Typography requirements: Use a bold, professional font; High contrast (Brand Blue #010080 on white background); Adequate spacing for touch usability",
+          "Responsive behavior: Desktop: Logo + company name aligned horizontally; Mobile: Logo + company name stacked or scaled for clarity",
+          "KEEP THE REST WEBSITE SAME AS IT IS."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Desktop (lg and above): the logo and institute name remain horizontally aligned within the header.",
+        "Mobile: the institute name is readable without truncation/ellipsis and wraps cleanly to at most 2 lines.",
+        "Mobile: institute name has clearly stronger visual hierarchy than other header elements (e.g., nav hidden, menu icon secondary).",
+        "Institute name text color is Brand Blue (#010080) on a white header background, and uses a bold font weight.",
+        "Header continues to show logo on the left and hamburger toggle on the right; no changes to routes, navigation items, CTAs, footer, or page content outside the header adjustments."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be modified: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Keep the rest of the website unchanged except for the header adjustments described.",
+    "Maintain strict brand colors only: #FFBE00, #010080, #FEFEFE (opacity variants allowed)."
+  ],
+  "nonGoals": [
+    "Do not change the Home/About/Courses/Contact page content or layout (except ensuring the hero tagline remains as-is).",
+    "Do not change backend logic, canister interfaces, or contact form behavior.",
+    "Do not introduce new navigation links, pages, or third-party integrations."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

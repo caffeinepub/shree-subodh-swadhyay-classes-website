@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-tagline-text-empowering-dreams-inspiring-success-from-the-website-header-next-to-the-logo-so-the-header-displays-only-the-institute-name-shree-subodh-swadhyay-classes-the-tagline-must-remain-available-only-in-the-home-page-hero-section-and-must-not-appear-anywhere-in-the-header-on-any-breakpoint",
+      "featureTitle": "Remove the tagline text “Empowering Dreams, Inspiring Success” from the website header (next to the logo) so the header displays only the institute name “Shree Subodh Swadhyay Classes”. The tagline must remain available only in the Home page hero section and must not appear anywhere in the header on any breakpoint.",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-header-institute-name-typography-and-responsive-layout-for-mobile-clarity-and-brand-visibility-while-keeping-the-existing-header-structure-logo-on-the-left-hamburger-menu-on-the-right-desktop-must-show-logo-institute-name-aligned-horizontally-mobile-must-make-the-name-clearly-readable-with-proper-line-breaking-maximum-2-lines-no-truncation-strong-hierarchy-bold-professional-styling-and-high-contrast-using-brand-blue-010080-on-a-white-background-ensure-adequate-spacing-and-touch-usability",
+      "featureTitle": "Update the header institute-name typography and responsive layout for mobile clarity and brand visibility while keeping the existing header structure (logo on the left, hamburger menu on the right). Desktop must show logo + institute name aligned horizontally. Mobile must make the name clearly readable with proper line breaking (maximum 2 lines), no truncation, strong hierarchy, bold professional styling, and high contrast using Brand Blue #010080 on a white background. Ensure adequate spacing and touch usability.",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

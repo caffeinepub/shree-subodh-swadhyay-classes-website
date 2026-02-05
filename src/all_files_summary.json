@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko backend storing contact forms and courses with add, query, and sorted retrieval functions.",
+  "feature_evidence.json": "Feature evidence report listing UI changes to header branding and responsive typography with associated files and metadata.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing major frontend files, pages, hooks, and configurations for the app.",
+  "frontend/index.css": "Tailwind base styles defining OKLCH-driven theme variables for light and dark modes with global element styling.",
+  "frontend/index.html": "HTML entry file setting metadata, favicon, and mounting the React app.",
+  "frontend/src/App.tsx": "Sets up TanStack Router routes for Home, About, Courses, and Contact using a shared Layout.",
+  "frontend/src/components/Layout.tsx": "Layout component containing header, responsive navigation, branding, CTA buttons, and mobile menu logic.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages the authenticated or anonymous backend actor and refreshes dependent queries on identity change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity provider and hook managing authentication state, login, logout, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching courses, contact forms, and submitting contact form data via the backend actor.",
+  "frontend/src/index.css": "Defines Tailwind base layers, extensive OKLCH theme variables, dark mode variants, and brand color utility classes.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and an Internet Identity provider.",
+  "frontend/src/pages/AboutPage.tsx": "Renders the About page with hero text and cards describing the institute’s vision and mission.",
+  "frontend/src/pages/ContactPage.tsx": "Implements a contact form with validation, submission via react-query, and displays contact information cards.",
+  "frontend/src/pages/CoursesPage.tsx": "Shows detailed course offerings using styled cards and provides navigation to the contact page.",
+  "frontend/src/pages/FacultyPage.tsx": "Empty placeholder file for the Faculty page.",
+  "frontend/src/pages/HomePage.tsx": "Displays the homepage hero section, key programs, and reasons to choose the institute, with CTA navigation.",
+  "frontend/src/pages/ResultsPage.tsx": "Empty placeholder file for the Results page.",
+  "frontend/src/pages/WhyChooseUsPage.tsx": "Empty placeholder file for the Why Choose Us page.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom OKLCH-driven color themes, container settings, extended utilities, and animations.",
+  "project_state.json": "Defines the project’s current configuration, required branding rules, 4-page structure, and the list of implemented features with associated requirements. Contains architectural notes, strict UI constraints, and metadata for tracking project state."
+}

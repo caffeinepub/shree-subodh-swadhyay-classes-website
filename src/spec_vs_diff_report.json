@@ -1,0 +1,38 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T19:06:06.631Z",
+  "summary": "Header tagline appears removed and header now shows only the institute name in brand blue on a white background with logo-left/menu-right structure preserved. However, the diff does not clearly guarantee the mobile institute name will wrap to a maximum of 2 lines at all mobile widths.",
+  "missing_requirements": [
+    {
+      "id": "REQ-12",
+      "requirement": "Mobile: the institute name wraps cleanly to at most 2 lines (no truncation/ellipsis) while remaining clearly readable.",
+      "reason": "The updated header name uses a fixed max width (max-w-[180px]) and responsive text sizing, but there is no explicit 2-line cap (e.g., line-clamp-2) or other constraint shown to ensure it cannot wrap to 3+ lines on very narrow screens. Also, the diff snippet does not show any explicit no-truncation/ellipsis handling beyond the absence of a 'truncate' class.",
+      "evidence": [
+        "frontend/src/components/Layout.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Sticky WhatsApp button added as part of the layout.",
+      "reason": "BuildRequest explicitly limits changes to header adjustments only; a sticky WhatsApp button is not requested as part of REQ-11/REQ-12.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Footer content/social links changes included in the layout update.",
+      "reason": "BuildRequest asks to keep the rest of the website unchanged except for the header adjustments; footer modifications are not requested in REQ-11/REQ-12.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/Layout.tsx",
+    "project_state.json"
+  ]
+}
