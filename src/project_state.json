@@ -1,173 +1,33 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Design and build a luxury-grade, trust-centric, SEO-optimized, mobile-first educational website for Shree Subodh Swadhyay Classes with strict brand colors and a 4-page structure (Home, About, Courses, Contact).",
-  "architectural_notes": [
-    "Strict brand palette only: #FFBE00, #010080, #FEFEFE; no other colors allowed.",
-    "Use provided logo in header, footer, and favicon.",
-    "Site structure is exactly 4 pages: Home, About Us, Courses, Contact Us.",
-    "Mobile-first, fully responsive layout with subtle hover animations and soft shadows.",
-    "Course presentation should use card-based layout.",
-    "Header must not display the tagline; header shows only institute name (max 2 lines on mobile, no truncation) in bold #010080 on white; logo left and hamburger right with responsive alignment (desktop horizontal, mobile stacked/scaled)."
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [
+    "Header/full photo image is not fully visible (cropping or layout issue)."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
+  "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Ensure the full uploaded photo is visible within a 1600x800 frame without cropping (image-2.png > hero-sss.dim_1600x800.png)",
   "existing_features": [
     {
-      "id": "feature-refactor-routing-and-navigation-to-match-the-required-4-page-website-structure-only-home-about-us-about-courses-courses-contact-us-contact-remove-routes-and-navigation-entries-for-why-choose-us-faculty-and-results-success-from-the-app-router-header-nav-mobile-menu-and-footer-quick-links",
-      "title": "Refactor routing and navigation to match the required 4-page website structure only: Home (/), About Us (/about), Courses (/courses), Contact Us (/contact). Remove routes and navigation entries for Why Choose Us, Faculty, and Results/Success from the app router, header nav, mobile menu, and footer quick links.",
+      "id": "feature-fix-the-home-page-hero-image-rendering-so-the-full-hero-photo-is-visible-not-cropped-or-cut-off-across-common-breakpoints-mobile-tablet-desktop-update-the-hero-image-container-css-so-the-image-scales-responsively-and-preserves-the-full-photo-e-g-use-a-constrained-aspect-ratio-and-an-object-fit-strategy-that-does-not-crop",
+      "title": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-apply-strict-brand-identity-across-the-entire-ui-use-only-these-colors-including-opacity-variants-of-the-same-colors-and-no-other-visible-colors-anywhere-in-the-ui-yellow-ffbe00-deep-blue-010080-white-fefefe-replace-any-existing-tailwind-utility-usage-that-introduces-other-colors-e-g-slate-gray-blue-red-green-backgrounds-gradients-muted-foreground-defaults-with-brand-compliant-styles-while-keeping-a-premium-academic-aesthetic-white-dominant-blue-yellow-highlights-spacious-layout-soft-shadows-subtle-hover-animations",
-      "title": "Apply strict brand identity across the entire UI: use ONLY these colors (including opacity variants of the same colors) and no other visible colors anywhere in the UI: Yellow #FFBE00, Deep Blue #010080, White #FEFEFE. Replace any existing Tailwind utility usage that introduces other colors (e.g., slate/gray/blue/red/green backgrounds, gradients, muted-foreground defaults) with brand-compliant styles while keeping a premium academic aesthetic (white-dominant, blue/yellow highlights, spacious layout, soft shadows, subtle hover animations).",
+      "id": "feature-verify-the-deployed-static-asset-path-for-the-hero-image-is-correct-and-that-the-file-exists-in-the-frontend-static-assets-if-the-hero-image-fails-to-load-update-the-code-to-point-to-the-correct-generated-asset-filename-path-and-ensure-the-hero-image-displays",
+      "title": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-replace-institute-branding-and-copy-site-wide-with-the-provided-exact-institute-details-for-shree-subodh-swadhyay-classes-including-institute-name-tagline-address-phone-whatsapp-timings-and-all-page-copy-as-provided-remove-or-replace-all-existing-edugene-classes-text-indore-address-and-old-phone-whatsapp-numbers",
-      "title": "Replace institute branding and copy site-wide with the provided exact institute details for Shree Subodh Swadhyay Classes, including institute name, tagline, address, phone, WhatsApp, timings, and all page copy as provided. Remove or replace all existing 'Edugene Classes' text, Indore address, and old phone/WhatsApp numbers.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-the-home-page-sections-exactly-as-specified-1-hero-with-the-provided-headings-subheadings-and-primary-ctas-enroll-now-book-a-free-career-guidance-session-and-call-now-91-99753-23281-2-about-snapshot-section-with-the-provided-paragraph-3-programs-overview-list-for-the-5-program-categories-4-why-choose-us-list-with-the-5-provided-points-5-admissions-banner-with-admissions-open-limited-seats-supporting-line-and-ctas-apply-now-call-91-99753-23281-ensure-ctas-are-prominent-but-not-overly-salesy-and-work-on-mobile-first-layouts",
-      "title": "Implement the Home page sections exactly as specified: (1) Hero with the provided headings/subheadings and primary CTAs: Enroll Now, Book a Free Career Guidance Session, and Call Now: +91 99753 23281; (2) About Snapshot section with the provided paragraph; (3) Programs Overview list for the 5 program categories; (4) Why Choose Us list with the 5 provided points; (5) Admissions Banner with 'Admissions Open – Limited Seats', supporting line, and CTAs '[Apply Now] | [Call +91 99753 23281]'. Ensure CTAs are prominent but not overly salesy and work on mobile-first layouts.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-the-about-us-page-exactly-as-specified-welcome-section-with-the-provided-welcome-headings-and-paragraph-plus-distinct-vision-and-mission-sections-using-the-provided-text-ensure-the-page-follows-the-same-premium-spacious-brand-compliant-layout",
-      "title": "Implement the About Us page exactly as specified: Welcome section with the provided welcome headings and paragraph, plus distinct Vision and Mission sections using the provided text. Ensure the page follows the same premium, spacious, brand-compliant layout.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-the-courses-page-content-exactly-as-specified-using-a-card-based-course-layout-and-premium-ui-courses-to-include-pre-foundation-5th-7th-foundation-8th-10th-ssc-cbse-11th-12th-coaching-mh-cet-neet-jee-nda-subodh-integrated-science-stream-program-11th-timeline-and-12th-timeline-and-golden-test-series-10th-12th-each-course-card-section-must-include-the-provided-bullet-points-and-any-durations-timelines",
-      "title": "Implement the Courses page content exactly as specified, using a card-based course layout and premium UI. Courses to include: Pre-Foundation (5th–7th), Foundation (8th–10th SSC & CBSE), 11th & 12th Coaching (MH-CET | NEET | JEE | NDA), SUBODH Integrated Science Stream Program (11th timeline and 12th timeline), and Golden Test Series (10th & 12th). Each course card/section must include the provided bullet points and any durations/timelines.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-the-contact-us-page-exactly-as-specified-institute-details-block-name-address-phone-whatsapp-timings-with-clickable-phone-tel-and-whatsapp-wa-me-links-embed-a-precise-google-map-for-shree-subodh-swadhyay-classes-model-colony-pune-replace-the-existing-contact-form-copy-and-any-old-address-phone-map-embed-with-the-new-institute-details",
-      "title": "Implement the Contact Us page exactly as specified: institute details block (name, address, phone, WhatsApp, timings) with clickable phone (tel:) and WhatsApp (wa.me) links; embed a precise Google Map for “Shree Subodh Swadhyay Classes, Model Colony, Pune”. Replace the existing contact form copy and any old address/phone/map embed with the new institute details.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-shared-layout-header-footer-sticky-actions-to-use-the-uploaded-logo-in-the-header-footer-and-favicon-replace-any-existing-generated-logo-references-with-the-new-logo-asset-s-ensure-the-footer-includes-logo-address-contact-info-quick-links-4-pages-only-social-media-icons-links-for-instagram-facebook-and-google-business-profile-using-the-exact-urls-provided",
-      "title": "Update the shared Layout (header + footer + sticky actions) to use the uploaded logo in the header, footer, and favicon. Replace any existing generated logo references with the new logo asset(s). Ensure the footer includes: logo, address & contact info, quick links (4 pages only), social media icons/links for Instagram, Facebook, and Google Business Profile using the exact URLs provided.",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-seo-metadata-for-the-new-institute-in-frontend-index-html-title-meta-description-and-keywords-reflecting-shree-subodh-swadhyay-classes-pune-and-the-offered-programs-pre-foundation-through-neet-jee-mh-cet-nda-keep-user-facing-text-in-english",
-      "title": "Update SEO metadata for the new institute in frontend/index.html: title, meta description, and keywords reflecting Shree Subodh Swadhyay Classes, Pune, and the offered programs (Pre-Foundation through NEET/JEE/MH-CET/NDA). Keep user-facing text in English.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-keep-the-existing-contact-form-submission-functionality-but-ensure-the-contact-page-form-labels-placeholders-and-success-error-messaging-remain-professional-and-aligned-with-the-new-brand-tone-do-not-introduce-third-party-integrations",
-      "title": "Keep the existing contact form submission functionality, but ensure the Contact page form labels/placeholders and success/error messaging remain professional and aligned with the new brand tone. Do not introduce third-party integrations.",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-tagline-text-empowering-dreams-inspiring-success-from-the-website-header-next-to-the-logo-so-the-header-displays-only-the-institute-name-shree-subodh-swadhyay-classes-the-tagline-must-remain-available-only-in-the-home-page-hero-section-and-must-not-appear-anywhere-in-the-header-on-any-breakpoint",
-      "title": "Remove the tagline text “Empowering Dreams, Inspiring Success” from the website header (next to the logo) so the header displays only the institute name “Shree Subodh Swadhyay Classes”. The tagline must remain available only in the Home page hero section and must not appear anywhere in the header on any breakpoint.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-header-institute-name-typography-and-responsive-layout-for-mobile-clarity-and-brand-visibility-while-keeping-the-existing-header-structure-logo-on-the-left-hamburger-menu-on-the-right-desktop-must-show-logo-institute-name-aligned-horizontally-mobile-must-make-the-name-clearly-readable-with-proper-line-breaking-maximum-2-lines-no-truncation-strong-hierarchy-bold-professional-styling-and-high-contrast-using-brand-blue-010080-on-a-white-background-ensure-adequate-spacing-and-touch-usability",
-      "title": "Update the header institute-name typography and responsive layout for mobile clarity and brand visibility while keeping the existing header structure (logo on the left, hamburger menu on the right). Desktop must show logo + institute name aligned horizontally. Mobile must make the name clearly readable with proper line breaking (maximum 2 lines), no truncation, strong hierarchy, bold professional styling, and high contrast using Brand Blue #010080 on a white background. Ensure adequate spacing and touch usability.",
-      "reqIds": [
-        "REQ-12"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Create a 4-page website (Home, About Us, Courses, Contact Us) with the provided copy and premium academic UI/UX (white-dominant, blue/yellow highlights, spacious layout, subtle animations, card-based courses, mobile-first).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Enforce strict brand identity: only use #FFBE00 (yellow), #010080 (deep blue), #FEFEFE (white); use provided logo in header, footer, and as favicon (no extra colors).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Home page sections: hero with CTAs (Enroll Now, Book Free Career Guidance, Call Now), About snapshot, Programs overview, Why Choose Us, Admissions banner with Apply Now/Call CTA.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "About Us page sections: Welcome text plus Vision and Mission content as provided.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Courses page: course cards/sections for Pre-Foundation, Foundation, 11th & 12th Coaching, Integrated Science Stream Program (11th/12th timelines), and Golden Test Series with provided details.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Contact page: institute details, clickable phone/WhatsApp, timings, and embed Google Map pin for “Shree Subodh Swadhyay Classes, Model Colony, Pune”.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Footer: logo, address/contact info, quick links, social media icons/links (Instagram, Facebook, Google Business Profile).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-8",
-      "summary": "SEO + conversion requirements: trust-centric content presentation, strong but non-salesy CTAs, and SEO-optimized structure for parents/students audience.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-9",
-      "summary": "Update header for mobile clarity/brand visibility: remove tagline from header; show only “Shree Subodh Swadhyay Classes” in bold brand-blue (#010080) on white, readable on mobile with max 2-line wrap and no truncation; keep logo left + hamburger right; desktop aligns logo + name horizontally, mobile stacks/scales; tagline remains only in hero section; keep rest of site unchanged.",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "gameProjectType": "none",
-  "projectName": "Shree Subodh Swadhyay Classes Website",
+  "new_feature_requests": [],
+  "projectName": "Fix Home page hero photo not fully visible",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

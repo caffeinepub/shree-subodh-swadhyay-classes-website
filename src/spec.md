@@ -1,14 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Improve mobile header clarity by removing the tagline from the header and optimizing the institute name layout/typography while keeping the rest of the site unchanged.
+**Goal:** Ensure the Home page hero image loads correctly and the full hero photo is visible (not cropped/cut off) across mobile, tablet, and desktop.
 
 **Planned changes:**
-- Remove the tagline text “Empowering Dreams, Inspiring Success” from the header across all pages and breakpoints; keep the tagline only in the Home page hero section.
-- Update header institute-name styling and responsive layout:
-  - Desktop (lg+): keep logo + institute name aligned horizontally.
-  - Mobile: ensure the institute name wraps cleanly to a maximum of 2 lines with no truncation/ellipsis and clear readability.
-  - Apply bold, professional typography with high contrast: Brand Blue (#010080) text on a white (#FEFEFE) header background.
-  - Preserve existing header structure (logo left, hamburger right) with adequate spacing for touch usability.
+- Update the Home page hero image container/CSS so the image scales responsively while preserving the full photo (no unintended cropping) across common breakpoints.
+- Verify the hero image static asset path/filename and update `frontend/src/pages/HomePage.tsx` to reference the correct `/assets/generated/` hero image so it loads successfully.
 
-**User-visible outcome:** The header shows only “Shree Subodh Swadhyay Classes” next to the logo with improved readability on mobile (no tagline in the header), while the Home hero section still displays the tagline.
+**User-visible outcome:** The Home page hero image consistently displays the full photo without clipping on mobile, tablet, and desktop, and no broken image icon appears.

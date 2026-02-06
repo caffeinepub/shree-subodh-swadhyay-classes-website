@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-05T19:06:06.633Z",
+  "generatedAt": "2026-02-06T03:14:29.086Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,26 +11,27 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Remove the tagline text “Empowering Dreams, Inspiring Success” from the website header (next to the logo) so the header displays only the institute name “Shree Subodh Swadhyay Classes”. The tagline must remain available only in the Home page hero section and must not appear anywhere in the header on any breakpoint.",
+        "id": "REQ-1",
+        "summary": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Layout.tsx",
           "frontend/src/pages/HomePage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Layout.tsx"
+          "frontend/src/pages/HomePage.tsx"
         ]
       },
       {
-        "id": "REQ-12",
-        "summary": "Update the header institute-name typography and responsive layout for mobile clarity and brand visibility while keeping the existing header structure (logo on the left, hamburger menu on the right). Desktop must show logo + institute name aligned horizontally. Mobile must make the name clearly readable with proper line breaking (maximum 2 lines), no truncation, strong hierarchy, bold professional styling, and high contrast using Brand Blue #010080 on a white background. Ensure adequate spacing and touch usability.",
+        "id": "REQ-2",
+        "summary": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Layout.tsx"
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/public/assets/generated/hero-sss.dim_1600x800.png"
         ],
         "matchedFiles": [
-          "frontend/src/components/Layout.tsx"
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/public/assets/generated/hero-sss.dim_1600x800.png"
         ]
       }
     ]
@@ -40,7 +41,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Layout.tsx",
+    "frontend/public/assets/generated/hero-sss.dim_1600x800.png",
+    "frontend/src/pages/HomePage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -103,12 +103,14 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="/assets/generated/hero-sss.dim_1600x800.png"
-                alt="Shree Subodh Swadhyay Classes - Quality Education"
-                className="rounded-lg shadow-2xl"
-              />
+            <div className="relative w-full">
+              <div className="relative w-full overflow-hidden rounded-lg shadow-2xl" style={{ aspectRatio: '2 / 1' }}>
+                <img
+                  src="/assets/generated/hero-sss.dim_1600x800.png"
+                  alt="Shree Subodh Swadhyay Classes - Quality Education"
+                  className="h-full w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

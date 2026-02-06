@@ -1,38 +1,39 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-05T19:06:06.631Z",
-  "summary": "Header tagline appears removed and header now shows only the institute name in brand blue on a white background with logo-left/menu-right structure preserved. However, the diff does not clearly guarantee the mobile institute name will wrap to a maximum of 2 lines at all mobile widths.",
+  "generatedAt": "2026-02-06T03:14:29.084Z",
+  "summary": "The diff shows partial edits to `HomePage.tsx` (hero section text/CTAs) plus updates to `frontend-file-summaries.txt` and `project_state.json`, but the provided truncated code does not include any visible hero `<img>` element, its static `/assets/generated/...` path, or the CSS/container changes needed to ensure the full image is visible without cropping across breakpoints.",
   "missing_requirements": [
     {
-      "id": "REQ-12",
-      "requirement": "Mobile: the institute name wraps cleanly to at most 2 lines (no truncation/ellipsis) while remaining clearly readable.",
-      "reason": "The updated header name uses a fixed max width (max-w-[180px]) and responsive text sizing, but there is no explicit 2-line cap (e.g., line-clamp-2) or other constraint shown to ensure it cannot wrap to 3+ lines on very narrow screens. Also, the diff snippet does not show any explicit no-truncation/ellipsis handling beyond the absence of a 'truncate' class.",
+      "id": "REQ-1",
+      "requirement": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
+      "reason": "In the truncated `HomePage.tsx` diff, the hero section shows headings and buttons but no evidence of an image element or the container/CSS changes (e.g., aspect-ratio wrapper + `object-contain`) needed to guarantee the full photo is visible without cropping.",
       "evidence": [
-        "frontend/src/components/Layout.tsx"
+        "frontend/src/pages/HomePage.tsx (truncated)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
+      "reason": "No evidence is shown of the hero `<img>` referencing a static asset path under `/assets/generated/` (or any hero image path at all) within the truncated `HomePage.tsx` diff.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (truncated)"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Sticky WhatsApp button added as part of the layout.",
-      "reason": "BuildRequest explicitly limits changes to header adjustments only; a sticky WhatsApp button is not requested as part of REQ-11/REQ-12.",
+      "description": "Added a new 'Call Now' CTA button that triggers `tel:+919975323281` from the Home page hero section.",
+      "reason": "The BuildRequest focuses only on fixing hero image visibility and correcting the static asset path; it does not request adding new CTAs or phone-call actions.",
       "evidence": [
-        "frontend-file-summaries.txt"
-      ]
-    },
-    {
-      "description": "Footer content/social links changes included in the layout update.",
-      "reason": "BuildRequest asks to keep the rest of the website unchanged except for the header adjustments; footer modifications are not requested in REQ-11/REQ-12.",
-      "evidence": [
-        "frontend-file-summaries.txt"
+        "frontend/src/pages/HomePage.tsx (truncated)"
       ]
     }
   ],
-  "confidence": 0.62,
+  "confidence": 0.56,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/Layout.tsx",
+    "frontend/src/pages/HomePage.tsx",
     "project_state.json"
   ]
 }

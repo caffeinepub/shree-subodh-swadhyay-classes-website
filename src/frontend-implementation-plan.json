@@ -1,44 +1,41 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Header mobile clarity: remove tagline and optimize institute name layout",
+  "title": "Fix Home page hero image visibility across breakpoints",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Remove the tagline from the header while keeping it in the Home hero section only.",
+      "id": "REQ-1",
+      "summary": "Update the Home page hero image layout/CSS so the full photo is always visible (no cropping) on mobile/tablet/desktop.",
       "acceptanceCriteria": [
-        "On all pages and at all breakpoints, the header area beside the logo does not show the tagline text.",
-        "The institute name shown in the header is exactly “Shree Subodh Swadhyay Classes”.",
-        "The Home page hero section still contains the tagline (no removal from hero)."
+        "On the Home page, the hero image is visible and loads successfully.",
+        "On mobile, tablet, and desktop widths, the full photo content is visible (no unintended cropping/cut-off).",
+        "The hero section layout remains stable (no overflow causing the image to disappear or be clipped)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Layout.tsx",
-          "operation": "modify",
-          "description": "Remove the header tagline text node (“Empowering Dreams, Inspiring Success”) from the logo/name block so only “Shree Subodh Swadhyay Classes” appears in the header across all breakpoints."
-        },
-        {
           "path": "frontend/src/pages/HomePage.tsx",
           "operation": "modify",
-          "description": "Verify the hero section still renders the tagline (“Empowering Dreams, Inspiring Success”) and remains unchanged after header edits."
+          "description": "Adjust the hero image wrapper and <img> styling to use a constrained aspect ratio and an object-fit strategy that preserves the entire photo (e.g., container with a consistent responsive aspect ratio + img sized to fill container using object-contain), and ensure no parent overflow/clipping hides the image at common breakpoints."
         }
       ]
     },
     {
-      "id": "REQ-12",
-      "summary": "Adjust header institute-name typography and responsive layout for readability on mobile while preserving header structure (logo left, hamburger right).",
+      "id": "REQ-2",
+      "summary": "Confirm the hero image static asset exists and that HomePage references the correct /assets/generated path so the image always loads.",
       "acceptanceCriteria": [
-        "Desktop (lg and above): the logo and institute name remain horizontally aligned within the header.",
-        "Mobile: the institute name is readable without truncation/ellipsis and wraps cleanly to at most 2 lines.",
-        "Mobile: institute name has clearly stronger visual hierarchy than other header elements (e.g., nav hidden, menu icon secondary).",
-        "Institute name text color is Brand Blue (#010080) on a white header background, and uses a bold font weight.",
-        "Header continues to show logo on the left and hamburger toggle on the right; no changes to routes, navigation items, CTAs, footer, or page content outside the header adjustments."
+        "The hero image request returns 200 (no broken image icon).",
+        "The <img> in frontend/src/pages/HomePage.tsx references the correct static path under /assets/generated/ for the hero image."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Layout.tsx",
+          "path": "frontend/src/pages/HomePage.tsx",
           "operation": "modify",
-          "description": "Update the header name styling and responsive layout: keep logo left + hamburger right; ensure desktop keeps logo+name horizontal; ensure mobile name wraps (no ellipsis/truncation), uses bold professional typography, strong hierarchy, adequate spacing, and high-contrast Brand Blue (#010080) on white using existing brand Tailwind utilities (no non-brand colors)."
+          "description": "Verify the hero <img> src points to the correct generated asset path and filename (use the exact generated asset hero image path under /assets/generated), updating the reference if needed so it reliably loads in production builds."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-sss.dim_1600x800.png",
+          "operation": "create",
+          "description": "Ensure the generated hero image asset exists at this exact static path for deployment (place/copy the provided generated file here if it is currently missing or located elsewhere)."
         }
       ]
     }
