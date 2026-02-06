@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Ensure the Home page hero image loads correctly and the full hero photo is visible (not cropped/cut off) across mobile, tablet, and desktop.
+**Goal:** Fix the header brand area so the company name stays on one line next to the logo and uses the brand blue color.
 
 **Planned changes:**
-- Update the Home page hero image container/CSS so the image scales responsively while preserving the full photo (no unintended cropping) across common breakpoints.
-- Verify the hero image static asset path/filename and update `frontend/src/pages/HomePage.tsx` to reference the correct `/assets/generated/` hero image so it loads successfully.
+- Update the header layout/styling so the company name does not wrap into two lines and remains horizontally aligned to the right of the logo across common mobile and desktop widths.
+- Change only the header company name text color to #010080 (brand blue), without impacting other site text colors.
 
-**User-visible outcome:** The Home page hero image consistently displays the full photo without clipping on mobile, tablet, and desktop, and no broken image icon appears.
+**User-visible outcome:** In the sticky header, the company name appears as a single line beside the logo and displays in blue (#010080) without overlapping the navigation or mobile menu button.

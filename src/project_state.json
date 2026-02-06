@@ -4,30 +4,37 @@
   "summary": "New project",
   "architectural_notes": [],
   "known_issues": [
-    "Header/full photo image is not fully visible (cropping or layout issue)."
+    "Header company name wraps to two lines beside the logo; should be single line.",
+    "Header company name text color is purple; should be brand blue #010080."
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Edit Images\n- Ensure the full uploaded photo is visible within a 1600x800 frame without cropping (image-2.png > hero-sss.dim_1600x800.png)",
   "existing_features": [
     {
-      "id": "feature-fix-the-home-page-hero-image-rendering-so-the-full-hero-photo-is-visible-not-cropped-or-cut-off-across-common-breakpoints-mobile-tablet-desktop-update-the-hero-image-container-css-so-the-image-scales-responsively-and-preserves-the-full-photo-e-g-use-a-constrained-aspect-ratio-and-an-object-fit-strategy-that-does-not-crop",
-      "title": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
+      "id": "feature-update-the-header-logo-company-name-area-so-the-company-name-renders-as-a-single-line-to-the-right-of-the-logo-no-line-break-wrapping-into-two-lines",
+      "title": "Update the header (logo + company name area) so the company name renders as a single line to the right of the logo (no line break/wrapping into two lines).",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-verify-the-deployed-static-asset-path-for-the-hero-image-is-correct-and-that-the-file-exists-in-the-frontend-static-assets-if-the-hero-image-fails-to-load-update-the-code-to-point-to-the-correct-generated-asset-filename-path-and-ensure-the-hero-image-displays",
-      "title": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
+      "id": "feature-change-the-header-company-name-text-color-from-the-current-purple-to-the-brand-blue-010080",
+      "title": "Change the header company name text color from the current purple to the brand blue #010080.",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "projectName": "Fix Home page hero photo not fully visible",
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Header: keep company name on a single line beside the logo and change its text color from purple to brand blue #010080",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Fix header company name wrapping and set brand blue text color",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

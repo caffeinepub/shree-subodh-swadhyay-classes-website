@@ -20,15 +20,15 @@ export default function Layout() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-brand-blue/10 bg-white shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="flex h-20 items-center justify-between gap-3 lg:h-20">
+          <div className="flex h-20 items-center justify-between gap-4 lg:h-24">
             {/* Logo and Company Name */}
-            <Link to="/" className="flex items-center gap-3 lg:gap-4">
+            <Link to="/" className="flex items-center gap-3">
               <img
                 src="/assets/generated/shree-subodh-logo-transparent.dim_200x200.png"
-                alt="Shree Subodh Swadhyay Classes Logo"
+                alt="Shree Subodh Swadhyay Classes"
                 className="h-12 w-12 flex-shrink-0 lg:h-14 lg:w-14"
               />
-              <span className="max-w-[180px] text-base font-bold leading-tight text-brand-blue sm:max-w-none sm:text-lg lg:text-xl">
+              <span className="whitespace-nowrap text-lg font-bold text-brand-blue lg:text-xl">
                 Shree Subodh Swadhyay Classes
               </span>
             </Link>

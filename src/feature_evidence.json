@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-fix-the-home-page-hero-image-rendering-so-the-full-hero-photo-is-visible-not-cropped-or-cut-off-across-common-breakpoints-mobile-tablet-desktop-update-the-hero-image-container-css-so-the-image-scales-responsively-and-preserves-the-full-photo-e-g-use-a-constrained-aspect-ratio-and-an-object-fit-strategy-that-does-not-crop",
-      "featureTitle": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
+      "featureId": "feature-update-the-header-logo-company-name-area-so-the-company-name-renders-as-a-single-line-to-the-right-of-the-logo-no-line-break-wrapping-into-two-lines",
+      "featureTitle": "Update the header (logo + company name area) so the company name renders as a single line to the right of the logo (no line break/wrapping into two lines).",
       "files": [
-        "frontend/src/pages/HomePage.tsx"
+        "frontend/src/components/Layout.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -20,10 +20,10 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-verify-the-deployed-static-asset-path-for-the-hero-image-is-correct-and-that-the-file-exists-in-the-frontend-static-assets-if-the-hero-image-fails-to-load-update-the-code-to-point-to-the-correct-generated-asset-filename-path-and-ensure-the-hero-image-displays",
-      "featureTitle": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
+      "featureId": "feature-change-the-header-company-name-text-color-from-the-current-purple-to-the-brand-blue-010080",
+      "featureTitle": "Change the header company name text color from the current purple to the brand blue #010080.",
       "files": [
-        "frontend/src/pages/HomePage.tsx"
+        "frontend/src/components/Layout.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

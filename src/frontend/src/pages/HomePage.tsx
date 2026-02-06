@@ -62,55 +62,44 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative bg-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-2 text-lg font-medium text-brand-yellow md:text-xl">
-                Empowering Dreams, Inspiring Success
-              </p>
-              <h1 className="mb-4 text-4xl font-bold leading-tight text-brand-blue md:text-5xl lg:text-6xl">
-                SHREE SUBODH SWADHYAY CLASSES
-              </h1>
-              <p className="mb-2 text-xl font-semibold text-brand-blue/80 md:text-2xl">
-                From Pre-Foundation to NEET | JEE | MHT-CET | NDA
-              </p>
-              <p className="mb-8 text-lg text-brand-blue/70">
-                We Build Leaders with Values
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  size="lg"
-                  onClick={() => navigate({ to: '/contact' })}
-                  className="bg-brand-yellow text-brand-blue hover:bg-brand-yellow/90"
-                >
-                  Enroll Now
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => navigate({ to: '/contact' })}
-                  className="border-brand-blue text-brand-blue hover:bg-brand-blue/5"
-                >
-                  Book a Free Career Guidance Session
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => (window.location.href = 'tel:+919975323281')}
-                  className="gap-2 border-brand-blue text-brand-blue hover:bg-brand-blue/5"
-                >
-                  <Phone className="h-5 w-5" />
-                  Call Now: +91 99753 23281
-                </Button>
-              </div>
-            </div>
-            <div className="relative w-full">
-              <div className="relative w-full overflow-hidden rounded-lg shadow-2xl" style={{ aspectRatio: '2 / 1' }}>
-                <img
-                  src="/assets/generated/hero-sss.dim_1600x800.png"
-                  alt="Shree Subodh Swadhyay Classes - Quality Education"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="mb-2 text-lg font-medium text-brand-yellow md:text-xl">
+              Empowering Dreams, Inspiring Success
+            </p>
+            <h1 className="mb-4 text-4xl font-bold leading-tight text-brand-blue md:text-5xl lg:text-6xl">
+              SHREE SUBODH SWADHYAY CLASSES
+            </h1>
+            <p className="mb-2 text-xl font-semibold text-brand-blue/80 md:text-2xl">
+              From Pre-Foundation to NEET | JEE | MHT-CET | NDA
+            </p>
+            <p className="mb-8 text-lg text-brand-blue/70">
+              We Build Leaders with Values
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                onClick={() => navigate({ to: '/contact' })}
+                className="bg-brand-yellow text-brand-blue hover:bg-brand-yellow/90"
+              >
+                Enroll Now
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => navigate({ to: '/contact' })}
+                className="border-brand-blue text-brand-blue hover:bg-brand-blue/5"
+              >
+                Book a Free Career Guidance Session
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => (window.location.href = 'tel:+919975323281')}
+                className="gap-2 border-brand-blue text-brand-blue hover:bg-brand-blue/5"
+              >
+                <Phone className="h-5 w-5" />
+                Call Now: +91 99753 23281
+              </Button>
             </div>
           </div>
         </div>

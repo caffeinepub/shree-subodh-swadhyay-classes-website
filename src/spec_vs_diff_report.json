@@ -1,39 +1,41 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-06T03:14:29.084Z",
-  "summary": "The diff shows partial edits to `HomePage.tsx` (hero section text/CTAs) plus updates to `frontend-file-summaries.txt` and `project_state.json`, but the provided truncated code does not include any visible hero `<img>` element, its static `/assets/generated/...` path, or the CSS/container changes needed to ensure the full image is visible without cropping across breakpoints.",
+  "generatedAt": "2026-02-06T12:59:58.080Z",
+  "summary": "Header company name was updated in Layout to prevent wrapping (using `whitespace-nowrap`) and styled with a `text-brand-blue` class, but the diff does not provide clear evidence that the resulting color is exactly hex `#010080`. Several unrelated/global changes (brand palette utilities/variables and project metadata/docs) were also introduced beyond the two header-focused requirements.",
   "missing_requirements": [
     {
-      "id": "REQ-1",
-      "requirement": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
-      "reason": "In the truncated `HomePage.tsx` diff, the hero section shows headings and buttons but no evidence of an image element or the container/CSS changes (e.g., aspect-ratio wrapper + `object-contain`) needed to guarantee the full photo is visible without cropping.",
-      "evidence": [
-        "frontend/src/pages/HomePage.tsx (truncated)"
-      ]
-    },
-    {
       "id": "REQ-2",
-      "requirement": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
-      "reason": "No evidence is shown of the hero `<img>` referencing a static asset path under `/assets/generated/` (or any hero image path at all) within the truncated `HomePage.tsx` diff.",
+      "requirement": "Change the header company name text color from the current purple to the brand blue #010080.",
+      "reason": "The header text now uses `text-brand-blue`, but `text-brand-blue` is defined via `oklch(var(--brand-blue))` and the diff sets `--brand-blue` to `0.20 0.15 265`, which is not shown to equal hex `#010080`. There is no direct hex assignment or demonstrated mapping guaranteeing the exact requested hex value.",
       "evidence": [
-        "frontend/src/pages/HomePage.tsx (truncated)"
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Added a new 'Call Now' CTA button that triggers `tel:+919975323281` from the Home page hero section.",
-      "reason": "The BuildRequest focuses only on fixing hero image visibility and correcting the static asset path; it does not request adding new CTAs or phone-call actions.",
+      "description": "Introduced/modified global brand color tokens and utility classes in `index.css` (brand-yellow/blue/white OKLCH variables and `.text-brand-*`, `.bg-brand-*`, `.border-brand-*` utilities).",
+      "reason": "BuildRequest only asks to prevent header name wrapping and set the header company name color to `#010080`, and explicitly discourages reworking global Tailwind/theme colors beyond what is required. The diff adds broader global styling infrastructure not explicitly requested.",
       "evidence": [
-        "frontend/src/pages/HomePage.tsx (truncated)"
+        "frontend/src/index.css"
+      ]
+    },
+    {
+      "description": "Updated/added project metadata and documentation-like summaries (e.g., `frontend-file-summaries.txt`, `project_state.json`) describing additional pages/features not requested in the BuildRequest.",
+      "reason": "The BuildRequest is strictly about the header company name wrapping and color. These metadata/summaries go beyond the requested scope and even reference pages/features not reflected as code changes in the provided diff summary.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
       ]
     }
   ],
-  "confidence": 0.56,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/index.css",
     "project_state.json"
   ]
 }

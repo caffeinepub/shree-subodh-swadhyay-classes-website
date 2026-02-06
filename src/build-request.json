@@ -1,58 +1,55 @@
 {
   "kind": "build_request",
-  "title": "Fix Home page hero photo not fully visible",
-  "priority": "high",
+  "title": "Fix header company name wrapping and set brand blue text color",
+  "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Fix the Home page hero image rendering so the full hero photo is visible (not cropped or cut off) across common breakpoints (mobile, tablet, desktop). Update the hero image container/CSS so the image scales responsively and preserves the full photo (e.g., use a constrained aspect ratio and an object-fit strategy that does not crop).",
+      "text": "Update the header (logo + company name area) so the company name renders as a single line to the right of the logo (no line break/wrapping into two lines).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-4"
+          "msg-1"
         ],
         "quotes": [
-          "the fuul photo is not visible"
+          "the company name should be in one line not in two line in the header section just beside the logo"
         ]
       },
       "acceptanceCriteria": [
-        "On the Home page, the hero image is visible and loads successfully.",
-        "On mobile, tablet, and desktop widths, the full photo content is visible (no unintended cropping/cut-off).",
-        "The hero section layout remains stable (no overflow causing the image to disappear or be clipped)."
+        "In the sticky header, the company name appears on one line next to the logo at common viewport sizes (mobile and desktop) without splitting into two stacked lines.",
+        "The header layout remains aligned (logo and company name vertically centered) and does not overlap the navigation or mobile menu button."
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Verify the deployed/static asset path for the hero image is correct and that the file exists in the frontend static assets. If the hero image fails to load, update the code to point to the correct generated asset filename/path and ensure the hero image displays.",
+      "text": "Change the header company name text color from the current purple to the brand blue #010080.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-4"
+          "msg-1"
         ],
         "quotes": [
-          "the fuul photo is not visible"
+          "the colour of the text is purple as of now ,change the colour to the brand colour #010080 blue."
         ]
       },
       "acceptanceCriteria": [
-        "The hero image request returns 200 (no broken image icon).",
-        "The <img> in frontend/src/pages/HomePage.tsx references the correct static path under /assets/generated/ for the hero image."
+        "The company name text in the header uses hex color #010080.",
+        "No other unrelated text colors across the site are changed as part of this fix."
       ]
     }
   ],
   "constraints": [
-    "Do not serve images via the backend; use frontend static assets (e.g., /assets/generated).",
-    "Do not edit files under frontend/src/components/ui (read-only).",
-    "Do not edit immutable hook files listed in SYSTEM_CONTEXT."
+    "Do not edit files in frontend/src/components/ui (compose them only).",
+    "Do not edit frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, or frontend/src/main.tsx."
   ],
   "nonGoals": [
-    "Changing backend data models or adding new backend endpoints.",
-    "Redesigning unrelated pages (About, Courses, Contact) beyond what is necessary to fix hero image visibility."
+    "Changing the footer styling or footer brand text color.",
+    "Changing the logo image asset or its dimensions.",
+    "Reworking global Tailwind theme colors beyond what is required to make the header company name use #010080."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Ensure the full uploaded photo is visible within a 1600x800 frame without cropping (image-2.png > hero-sss.dim_1600x800.png)"
-    ]
+    "edits": []
   },
   "userProfileUpdate": {
     "goalsToAdd": [],
